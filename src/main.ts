@@ -2,7 +2,7 @@ import openai from "@/api/open-ai";
 
 const systemContentPrompt =
   "As developer in JavaScript + TypeScript, you must create a website with Tailwind CSS." +
-  "Your task is generated HTML code with Tailwind according to the user prompt." +
+  "Your task is to generate a HTML code with Tailwind according to the user prompt." +
   "You must return valid HTML content without text." +
   "No markdown is allowed." +
   "No ```` is allowed.";
