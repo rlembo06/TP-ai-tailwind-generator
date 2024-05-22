@@ -14,6 +14,10 @@ form?.addEventListener("submit", async (event) => {
       model: "gpt-3.5-turbo",
     });
 
-    console.log("====", { prompt, chatCompletion });
+    const iframe = document.getElementById("generatedCode");
+    const code = chatCompletion.choices[0].message.content;
+    if (code && iframe instanceof HTMLIFrameElement) {
+      iframe.srcdoc = code;
+    }
   }
 });
